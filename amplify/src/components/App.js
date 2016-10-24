@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import firebase, { provider } from '../firebase';
+import firebase from '../firebase';
 import SignIn from './SignIn';
+import Settings from './Settings';
+import BandMates from './BandMates';
 
 class App extends Component {
   constructor() {
@@ -31,6 +33,8 @@ class App extends Component {
             console.log(error);
           })}
           >Sign Out</button>
+          <Settings />
+          <BandMates />
         </div>
       )
     }
