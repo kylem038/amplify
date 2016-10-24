@@ -18,7 +18,7 @@ const Profile = () => {
           <li>Rock</li>
         </ul>
       </section>
-    <button className='ConnectButton'>Connect wtih Logan Bishop!</button>
+    <button className='ConnectButton'>Connect with Logan Bishop!</button>
     <button className='CancelButton'>Cancel</button>
     </section>
   );
