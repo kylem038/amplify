@@ -1,7 +1,7 @@
 import React from 'react';
 import firebase, { provider } from '../firebase';
 
-export default function () {
+const SignIn = () => {
   return (
     <section className="SignIn">
     <h1>JamFinder</h1>
@@ -18,3 +18,5 @@ export default function () {
     </section>
   );
 }
+
+export default SignIn;

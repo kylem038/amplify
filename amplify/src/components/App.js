@@ -3,6 +3,7 @@ import firebase from '../firebase';
 import SignIn from './SignIn';
 import Settings from './Settings';
 import BandMates from './BandMates';
+import Profile from './Profile';
 
 class App extends Component {
   constructor() {
@@ -35,6 +36,7 @@ class App extends Component {
           >Sign Out</button>
           <Settings />
           <BandMates />
+          <Profile />
         </div>
       )
     }
