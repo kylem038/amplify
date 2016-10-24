@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function () {
+const Settings = () => {
   return (
     <section className='Settings'>
       <h1>Settings</h1>
@@ -15,3 +15,5 @@ export default function () {
     </section>
   );
 }
+
+export default Settings;
