@@ -13,10 +13,21 @@ class App extends Component {
 
   getLocalCoordinates() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
+      const geo_success = (position) => {
         // return set state to hold current location data
         console.log(position.coords.latitude, position.coords.longitude);
-      });
+      };
+
+      const geo_error = (error) => {
+        console.log(error);
+      };
+
+      const geo_options = {
+        enableHighAccuracy: true,
+        maximumAge: 30000,
+        timeout: 27000
+      };
+      navigator.geolocation.getCurrentPosition(geo_success, geo_error, geo_options);
     }
   }
 
