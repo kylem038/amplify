@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class BandMates extends Component {
+class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
@@ -11,7 +11,7 @@ class BandMates extends Component {
 
   render() {
     return (
-      <section className='BandMates'>
+      <section className='Dashboard'>
         <h1>JamFinder</h1>
         <p>Potential BandMates</p>
         {/* references API call for # of matches */}
@@ -27,4 +27,4 @@ class BandMates extends Component {
   }
 }
 
-export default BandMates;
+export default Dashboard;
