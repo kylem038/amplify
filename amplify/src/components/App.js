@@ -1,22 +1,36 @@
 import React, { Component } from 'react';
 import firebase from '../firebase';
 import SignIn from './SignIn';
-import Settings from './Settings';
-import BandMates from './BandMates';
-import Profile from './Profile';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       user: null,
+      currentLocation: {},
     };
+  }
+
+  getLocalCoordinates() {
+    if (navigator.geolocation) {
+      const geo_success = (position) => {
+        // return set state to hold current location data
+        console.log(position.coords.latitude, position.coords.longitude);
+      };
+
+      const geo_error = (error) => {
+        console.log(error);
+      };
+
+      navigator.geolocation.getCurrentPosition(geo_success, geo_error);
+    }
   }
 
   componentDidMount() {
     firebase.auth().onAuthStateChanged((user) => {
       this.setState({ user });
     });
+    this.getLocalCoordinates();
   }
 
   render() {
@@ -34,9 +48,6 @@ class App extends Component {
             console.log(error);
           })}
           >Sign Out</button>
-          <Settings />
-          <BandMates />
-          <Profile />
         </div>
       )
     }
