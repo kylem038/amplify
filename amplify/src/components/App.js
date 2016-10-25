@@ -22,12 +22,7 @@ class App extends Component {
         console.log(error);
       };
 
-      const geo_options = {
-        enableHighAccuracy: true,
-        maximumAge: 30000,
-        timeout: 27000
-      };
-      navigator.geolocation.getCurrentPosition(geo_success, geo_error, geo_options);
+      navigator.geolocation.getCurrentPosition(geo_success, geo_error);
     }
   }
 
