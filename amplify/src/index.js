@@ -7,6 +7,7 @@ import Genres from './components/Genres';
 import Skill from './components/Skill';
 import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
+import NotFound from './components/NotFound';
 import { BrowserRouter, Match, Miss } from 'react-router';
 require("!style!css!sass!./style/index.scss");
 
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Match exactly pattern='/skill' component={Skill} />
       <Match exactly pattern='/dashboard' component={Dashboard} />
       <Match exactly pattern='/profile' component={Profile} />
+      <Miss component={NotFound} />
     </div>
   </BrowserRouter>
   ,
