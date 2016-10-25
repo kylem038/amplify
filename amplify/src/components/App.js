@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../firebase';
 import SignIn from './SignIn';
-import Settings from './Settings';
-import BandMates from './BandMates';
-import Profile from './Profile';
+import Skill from './Skill';
 
 class App extends Component {
   constructor() {
@@ -34,9 +32,6 @@ class App extends Component {
             console.log(error);
           })}
           >Sign Out</button>
-          <Settings />
-          <BandMates />
-          <Profile />
         </div>
       )
     }
