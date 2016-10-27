@@ -1,0 +1,47 @@
+.ProfilePage {
+  display: flex;
+  flex-direction: column;
+}
+
+.MusicianName {
+  color: #FFFFFF;
+  margin: 50px 25px 10px 25px;
+}
+
+.MusicianImage {
+  background: url('../../imgs/profile-placeholder.png') no-repeat;
+  height: 50px;
+  width: 50px;
+  background-size: 100%;
+  border-radius: 10px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.ProfileInfo {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding-left: 12px;
+}
+
+.ProfileInstrumentsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.ProfileGenresList {
+  margin: 0px 0px 20px 40px;
+}
+
+.ProfilePage p {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ProfilePage li {
+  font-size: 10px;
+  font-style: italic;
+}
