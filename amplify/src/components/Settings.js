@@ -5,11 +5,11 @@ const Settings = () => {
     <section className='Settings'>
       <h1>Settings</h1>
       <p>Instrument(s) You Play</p>
-      {/* drop down here? */}
+      <input type='text' placeholder='Instrument' className='SettingsInput' />
       <p>Genres You Enjoy</p>
-      {/* drop down here? */}
+      <input type='text' placeholder='Genre' className='SettingsInput' />
       <p>Skill Level</p>
-      {/* drop down here? */}
+      <input type='text' placeholder='Skill' className='SettingsInput' />
       <button className='SubmitSettings'>Submit</button>
       <button className='CancelSettings'>Cancel</button>
     </section>

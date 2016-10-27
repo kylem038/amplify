@@ -15,11 +15,11 @@ class Dashboard extends Component {
         <h1>JamFinder</h1>
         <p>Potential BandMates</p>
         {/* references API call for # of matches */}
-        <ul>
-          <li>Logan Bishop</li>
-          <li>Guitar</li>
-          <li>Blues</li>
-          <li>Rock</li>
+        <ul className="Bandmate">
+          <li className='BandmateName'>Logan Bishop</li>
+          <li className='BandmateInstrument'>Guitar</li>
+          <li className='BandmateGenre'>Blues</li>
+          <li className='BandmateGenre'>Rock</li>
           {/* show object props here from API call */}
         </ul>
       </section>
@@ -28,3 +28,19 @@ class Dashboard extends Component {
 }
 
 export default Dashboard;
+
+
+
+{/* <section className="bandmate">
+  <div className="name">
+    <p className="bandName">Joe Schmo</p>
+  </div>
+
+  <div className="instruments">
+
+  </div>
+
+  <div className="genres">
+
+  </div>
+</section> */}

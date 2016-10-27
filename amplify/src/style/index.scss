@@ -1,17 +1,56 @@
 @import '_reset';
 @import '_app';
-@import '_bandmates';
+@import '_dashboard';
 @import '_profile';
 @import '_settings';
 @import '_signin';
+@import '_instruments';
+@import '_genres';
+@import '_skill';
 @import '_notfound';
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  color: #F35C08;
 }
 
-section {
-  border: solid black 1px;
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 50px 25px 50px 25px;
+}
+
+p {
+  font-size: 12px;
+  margin: 10px 0px 10px 0px;
+}
+
+.SubmitSettings {
+  background-color: #F35C08;
+  border-radius: 27px;
+  border-style: none;
+  color: #FFFFFF;
+  height: 42px;
+  width: 186px;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 100px 0px 20px 10px;
+}
+
+.CancelSettings {
+  background-color: #780800;
+  border-radius: 27px;
+  border-style: none;
+  color: #FFFFFF;
+  height: 30px;
+  width: 144px;
+  font-size: 10px;
+  font-weight: lighter;
+  margin-left: 30px;
 }
