@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const SignIn = () => {
-  const { logIn } = this.props;
+const SignIn = (props) => {
+  const { logIn } = props;
 
   return (
     <section className="SignIn">

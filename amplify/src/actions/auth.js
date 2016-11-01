@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 
 const provider = new firebase.auth.FacebookAuthProvider();
 
-export const startListeningToAuth = () => {
+const startListeningToAuth = () => {
   return (dispatch, getState) => {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
@@ -32,7 +32,7 @@ export const startListeningToAuth = () => {
   };
 };
 
-export const logIn = () => {
+const logIn = () => {
   return (dispatch) => {
     dispatch({
       type: 'ATTEMPTING_SIGN_IN'
@@ -52,7 +52,7 @@ export const logIn = () => {
   };
 };
 
-export const logOut = () => {
+const logOut = () => {
   return (dispatch) => {
     dispatch({
       type: 'LOG_OUT'
@@ -66,4 +66,10 @@ export const logOut = () => {
       console.log(error);
     });
   };
+};
+
+export {
+  startListeningToAuth,
+  logIn,
+  logOut
 };
