@@ -1,21 +1,19 @@
 import React from 'react';
-import firebase, { provider } from '../firebase';
+import { Link } from 'react-router';
 
-const SignIn = () => {
+const SignIn = (props) => {
+  const { logIn } = props;
+
   return (
     <section className="SignIn">
     <h1>JamFinder</h1>
-    <button
-      className='FacebookLogin'
-      alt="Sign up with Facebook"
-      onClick={() => firebase.auth().signInWithPopup(provider).then(function(result) {
-        // var token = result.credential.accessToken;
-        // var user = result.user;
-        // console.log(user);
-      }).catch(function(error) {
-        console.log(error);
-      })}
-      ></button>
+    <Link to='/settings'>
+      <button
+        className='FacebookLogin'
+        alt="Sign up with Facebook"
+        onClick={e => logIn()}
+        ></button>
+      </Link>
     </section>
   );
 }

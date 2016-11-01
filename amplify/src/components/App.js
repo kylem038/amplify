@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import firebase from '../firebase';
-import SignIn from './SignIn';
+import SignIn from '../containers/SignIn';
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: null,
       currentLocation: {},
     };
   }
@@ -27,27 +26,21 @@ class App extends Component {
   }
 
   componentDidMount() {
-    firebase.auth().onAuthStateChanged((user) => {
-      this.setState({ user });
-    });
     this.getLocalCoordinates();
   }
 
   render() {
     const { user } = this.state;
+    const { status, username, logOut } = this.props;
     if (user) {
       return (
         <div className='LoggedIn' role='link'>
         <h1>JamFinder</h1>
-        <button
-          className='SignOut'
-          alt='Sign out'
-          onClick={() => firebase.auth().signOut().then(function() {
-            console.log('Signed out');
-          }, function(error) {
-            console.log(error);
-          })}
-          >Sign Out</button>
+          <button
+            className='SignOut'
+            alt='Sign out'
+            onClick={e => logOut()}
+            >Sign Out</button>
         </div>
       )
     }
