@@ -3,7 +3,6 @@
 @import '_dashboard';
 @import '_profile';
 @import '_settings';
-@import '_signin';
 @import '_instruments';
 @import '_genres';
 @import '_skill';
@@ -29,6 +28,10 @@ h1 {
 p {
   font-size: 12px;
   margin: 10px 0px 10px 0px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .SubmitSettings {
@@ -63,4 +66,22 @@ p {
   border-radius: 27px;
   color: #FFFFFF;
   margin: 150px 0px 20px 0px;
+}
+
+.CancelButtonLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.SubmitButtonLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  text-decoration: none;
+  color: #FFFFFF;
 }
