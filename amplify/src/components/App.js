@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getLocalCoordinates();
+    // this.getLocalCoordinates();   --enable for prod
   }
 
   render() {

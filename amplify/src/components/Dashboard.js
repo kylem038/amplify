@@ -43,19 +43,3 @@ class Dashboard extends Component {
 }
 
 export default Dashboard;
-
-
-
-{/* <section className="bandmate">
-  <div className="name">
-    <p className="bandName">Joe Schmo</p>
-  </div>
-
-  <div className="instruments">
-
-  </div>
-
-  <div className="genres">
-
-  </div>
-</section> */}

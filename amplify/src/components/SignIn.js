@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import * as actions from '../actions/auth';
-
 const SignIn = (props) => {
-  const { status, username, logOut, logIn } = props;
+  const { status, logOut, logIn } = props;
 
   if (status === 'SIGNED_IN') {
     return (

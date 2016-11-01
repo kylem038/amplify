@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Profile = () => {
   return (
@@ -24,7 +25,7 @@ const Profile = () => {
         </span>
       </section>
     <button className='ConnectButton'>Connect with Logan Bishop!</button>
-    <button className='CancelSettings'>Cancel</button>
+    <button className='CancelSettings'><Link to='/dashboard' className='CancelButtonLink'>Cancel</Link></button>
     </section>
   );
 };

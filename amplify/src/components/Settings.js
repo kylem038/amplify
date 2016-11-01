@@ -17,12 +17,8 @@ const Settings = () => {
       <p>Skill Level</p>
       <input type='text' placeholder='Skill' className='SettingsInput' />
       </Link>
-      <Link to='/dashboard'>
-      <button className='SubmitSettings'>Submit</button>
-      </Link>
-      <Link to='/'>
-      <button className='CancelSettings'>Cancel</button>
-      </Link>
+      <button className='SubmitSettings'><Link to='/dashboard' className='SubmitButtonLink'>Submit</Link></button>
+      <button className='CancelSettings'><Link to='/' className='CancelButtonLink'>Cancel</Link></button>
     </section>
   );
 }
