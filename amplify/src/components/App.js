@@ -30,22 +30,9 @@ class App extends Component {
   }
 
   render() {
-    const { user } = this.state;
-    const { status, username, logOut } = this.props;
-    if (user) {
-      return (
-        <div className='LoggedIn' role='link'>
-        <h1>JamFinder</h1>
-          <button
-            className='SignOut'
-            alt='Sign out'
-            onClick={e => logOut()}
-            >Sign Out</button>
-        </div>
-      )
-    }
     return (
       <div className="App">
+        <h1>JamFinder</h1>
         <SignIn />
       </div>
     );
