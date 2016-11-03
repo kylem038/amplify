@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ShowHideSpan = (props, style) => {
+const ShowHideSpan = (props) => {
   return (
-  <span className={props.hidden ? style.hidden : style.show} children={'✔'}>
+  <span className={props.hidden ? 'hidden' : 'show'} children={'✔'}>
   </span>
   )
 };
 
 export default ShowHideSpan;
 
-// normal styling 'CheckboxArea' 
+// normal styling 'CheckboxArea'

@@ -9,7 +9,10 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(toggleChecked());
     }
   };
-
 };
 
-export default connect(null, mapDispatchToProps)(Instruments);
+const mapStateToProps = (state) => {
+  return state.toggleCheckedReducer;
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Instruments);
