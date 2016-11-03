@@ -7,8 +7,8 @@ const toggleCheckedReducer = ( state = initialState, action ) => {
   switch(action.type) {
     case 'TOGGLE_CHECKED':
       return {
-        checked: action.value,
-        hidden: action.value
+        checked: action.checked,
+        hidden: action.hidden
       };
     default:
       return state;

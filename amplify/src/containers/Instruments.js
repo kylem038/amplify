@@ -5,10 +5,11 @@ import toggleChecked from '../actions/toggleChecked';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    toggleChecked(checked, hidden) {
-      dispatch(toggleChecked(checked, hidden));
+    toggleChecked() {
+      dispatch(toggleChecked());
     }
   };
+
 };
 
 export default connect(null, mapDispatchToProps)(Instruments);

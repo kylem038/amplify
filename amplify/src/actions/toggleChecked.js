@@ -5,7 +5,7 @@ export default function toggleChecked() {
 
     dispatch({
       type: 'TOGGLE_CHECKED',
-      value: !checked,
+      checked: !checked,
       hidden: !hidden
     });
   };
