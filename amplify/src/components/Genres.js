@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Genres = () => {
   return (
@@ -34,8 +35,12 @@ const Genres = () => {
         </span>
       </div>
       </form>
-      <button className='SubmitSettings'>Submit</button>
-      <button className='CancelSettings'>Cancel</button>
+      <button className='SubmitSettings'>
+        <Link to='/settings' className='SubmitButtonLink'>Submit</Link>
+      </button>
+      <button className='CancelSettings'>
+        <Link to='/settings' className='CancelButtonLink'>Cancel</Link>
+      </button>
     </section>
   );
 }
