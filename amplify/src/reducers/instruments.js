@@ -11,7 +11,7 @@ const initialState = [
 const instruments = ( state = initialState, action ) => {
   switch(action.type) {
     case 'TOGGLE_CHECKED':
-      
+
       console.log('Instrument reducer', state);
       return state.map(instrument => {
         if (instrument.id !== action.id) {
