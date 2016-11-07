@@ -9,7 +9,7 @@ export class SingleSelect extends Component {
     const { addSingleSettingValue, settingName } = this.props;
     if (e.currentTarget.checked) {
       addSingleSettingValue(settingName, e.currentTarget.value);
-    } 
+    }
   }
 
   render() {
@@ -19,7 +19,7 @@ export class SingleSelect extends Component {
         <p>{settingName}</p>
         { values.map((valueName) => {
           return (
-            <label for={valueName} key={valueName}>
+            <label key={valueName}>
               <input
                 type='radio'
                 checked={settings[settingName].includes(valueName)}

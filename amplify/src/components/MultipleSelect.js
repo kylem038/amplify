@@ -21,7 +21,7 @@ export class MultipleSelect extends Component {
         <p>{settingName}</p>
         { values.map((valueName) => {
           return (
-            <label for={valueName} key={valueName}>
+            <label key={valueName}>
               <input
                 type="checkbox"
                 checked={settings[settingName].includes(valueName)}
