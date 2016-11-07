@@ -18,6 +18,8 @@ const settings = ( state = initialState, action ) => {
     return Object.assign({}, state, {
       [action.settingName]: action.settingValue
     });
+    case 'CLEAR_SETTINGS':
+    return state = initialState;
     default:
       return state;
   }

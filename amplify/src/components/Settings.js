@@ -8,7 +8,7 @@ import * as actions from '../actions/settings';
 
 export class Settings extends Component {
   render() {
-    const { saveSettings } = this.props;
+    const { saveSettings, clearSettings } = this.props;
     return (
       <section className='Settings'>
         <h1>Your Settings</h1>
@@ -16,7 +16,7 @@ export class Settings extends Component {
         <MultipleSelect settingName='genres' values={['Rock', 'Jazz', 'Indie', 'Hip-Hop']}/>
         <SingleSelect settingName='skillLevel' values={['Beginner', 'Experienced', 'Master']}/>
         <button className='SubmitSettings' onClick={e => saveSettings()}>Submit</button>
-        <button className='CancelSettings'>Cancel</button>
+        <button className='CancelSettings' onClick={e => clearSettings()}>Clear Settings</button>
       </section>
     );
   }
