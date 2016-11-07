@@ -6,7 +6,7 @@ const initialState = {
   }
 };
 
-const authReducer = ( state = initialState.auth, action ) => {
+const auth = ( state = initialState.auth, action ) => {
   switch(action.type) {
     case 'ATTEMPTING_SIGN_IN':
       return {
@@ -31,4 +31,4 @@ const authReducer = ( state = initialState.auth, action ) => {
   }
 };
 
-export default authReducer;
+export default auth;

@@ -1,5 +1,4 @@
 const firebase = require('firebase');
-// let userUid;
 
 var config = {
     apiKey: "AIzaSyD-ccX7p5AidHl0RRto_paFBYI1XnQ36YU",
@@ -41,15 +40,6 @@ const logIn = () => {
 
     firebase.auth().signInWithPopup(provider)
     .then(result => {
-      // userUid = result.user.uid;
-
-      // check if user exists in firebase
-      // if true, log in user
-      // if false, create user in firebase
-      // const reference = firebase.database().ref(`/${userUid}/${result.user.displayName}`);
-      // reference.push({
-      //   username: result.user.displayName
-      // });
       dispatch({
         type: 'LOG_IN',
         uid: result.user.uid,

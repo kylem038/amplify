@@ -5,7 +5,7 @@ import SignIn from '../components/SignIn';
 import * as actions from '../actions/auth';
 
 const mapStateToProps = (state) => {
-  return state.authReducer;
+  return state.auth;
 };
 
 const mapDispatchToProps = (dispatch) => {
