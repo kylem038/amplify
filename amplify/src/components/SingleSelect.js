@@ -23,7 +23,7 @@ export class SingleSelect extends Component {
           return (
             <label for={valueName} key={valueName}>
               <input
-                type='checkbox'
+                type='radio'
                 checked={settings[settingName].includes(valueName)}
                 value={valueName}
                 onChange={e => this.toggleSetting(e)}
