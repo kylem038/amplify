@@ -11,10 +11,17 @@ const settings = ( state = initialState, action ) => {
         [action.settingName]: state[action.settingName].concat(action.settingValue)
       });
     case 'REMOVE_SETTING':
-      const newState = Object.assign({}, state, {
+      return Object.assign({}, state, {
         [action.settingName]: state[action.settingName].filter((value) => value !== action.settingValue)
       });
-      return newState;
+    case 'ADD_SINGLE_SETTING':
+    return Object.assign({}, state, {
+      [action.settingName]: action.settingValue
+    });
+    case 'REMOVE_SINGLE_SETTING':
+    return Object.assign({}, state, {
+      [action.settingName]: ''
+    });
     default:
       return state;
   }

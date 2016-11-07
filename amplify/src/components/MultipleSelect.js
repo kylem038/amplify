@@ -15,13 +15,20 @@ export class MultipleSelect extends Component {
   }
 
   render() {
-    const {settingName, values, addSettingValue, settings } = this.props;
+    const {settingName, values, settings } = this.props;
     return(
       <section className='MultipleSelect'>
         <p>{settingName}</p>
         { values.map((valueName) => {
           return (
-            <label for={valueName}> <input type="checkbox" checked={settings[settingName].includes(valueName)} value={valueName} onChange={e => this.toggleSetting(e)} /> {valueName}</label>
+            <label for={valueName} key={valueName}>
+              <input
+                type="checkbox"
+                checked={settings[settingName].includes(valueName)}
+                value={valueName}
+                onChange={e => this.toggleSetting(e)}
+              /> {valueName}
+            </label>
           )
         })
         }

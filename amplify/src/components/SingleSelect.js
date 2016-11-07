@@ -1,33 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const SingleSelect = () => {
-  return (
-    <section className='Skill'>
-      <form className='skill-form'>
-      <div className='SkillBar'>
-        <span className='SkillName'>
-          <p>Beginner</p>
-        </span>
-        <span className='CheckboxArea' children={'✔'}>
-        </span>
-      </div>
-      <div className='SkillBar'>
-        <span className='SkillName'>
-          <p>Experienced</p>
-        </span>
-        <span className='CheckboxArea' children={'✔'}>
-        </span>
-      </div>
-      <div className='SkillBar'>
-        <span className='SkillName'>
-          <p>Master</p>
-        </span>
-        <span className='CheckboxArea' children={'✔'}>
-        </span>
-      </div>
-      </form>
-    </section>
-  );
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../actions/settings';
+
+export class SingleSelect extends Component {
+  toggleSetting(e) {
+    const { addSingleSettingValue, removeSingleSettingValue, settingName } = this.props;
+    if (e.currentTarget.checked) {
+      addSingleSettingValue(settingName, e.currentTarget.value);
+    } else {
+      removeSingleSettingValue(settingName, e.currentTarget.value);
+    }
+  }
+
+  render() {
+    const {settingName, values, settings} = this.props;
+    return(
+      <section className='SingleSelect'>
+        <p>{settingName}</p>
+        { values.map((valueName) => {
+          return (
+            <label for={valueName} key={valueName}>
+              <input
+                type='checkbox'
+                checked={settings[settingName].includes(valueName)}
+                value={valueName}
+                onChange={e => this.toggleSetting(e)}
+              /> {valueName}
+            </label>
+          )
+        })
+        }
+      </section>
+    )
+  };
 }
 
-export default SingleSelect;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(actions, dispatch)
+};
+
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SingleSelect);
