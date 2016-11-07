@@ -18,10 +18,6 @@ const settings = ( state = initialState, action ) => {
     return Object.assign({}, state, {
       [action.settingName]: action.settingValue
     });
-    case 'REMOVE_SINGLE_SETTING':
-    return Object.assign({}, state, {
-      [action.settingName]: ''
-    });
     default:
       return state;
   }

@@ -6,12 +6,10 @@ import * as actions from '../actions/settings';
 
 export class SingleSelect extends Component {
   toggleSetting(e) {
-    const { addSingleSettingValue, removeSingleSettingValue, settingName } = this.props;
+    const { addSingleSettingValue, settingName } = this.props;
     if (e.currentTarget.checked) {
       addSingleSettingValue(settingName, e.currentTarget.value);
-    } else {
-      removeSingleSettingValue(settingName, e.currentTarget.value);
-    }
+    } 
   }
 
   render() {
