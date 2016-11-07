@@ -1,5 +1,4 @@
 const firebase = require('firebase');
-// let userUid;
 
 var config = {
     apiKey: "AIzaSyD-ccX7p5AidHl0RRto_paFBYI1XnQ36YU",
@@ -12,6 +11,36 @@ var config = {
 firebase.initializeApp(config);
 
 const provider = new firebase.auth.FacebookAuthProvider();
+
+// const saveInstrumentsToFirebase = (checkedInstruments) => {
+//   firebase.database().ref('instruments').set(checkedInstruments)
+//     .then(() => {
+//       dispatch({
+//         type: 'INSTRUMENTS_SAVED_TO_FIREBASE',
+//         checkedInstruments
+//       })
+//     })
+// }
+// {
+//   fbId: {
+//     firebaseID: {
+//       // data
+//     }
+//   }
+// }
+
+// const initialState = {
+//   auth: {
+//     username: '',
+//     uid: ''
+//   },
+//   userSettings: {
+//     uid: '',
+//     instruments: [],
+//     genres: [],
+//     skills: []
+//   }
+// }
 
 const startListeningToAuth = () => {
   return (dispatch, getState) => {
@@ -41,15 +70,6 @@ const logIn = () => {
 
     firebase.auth().signInWithPopup(provider)
     .then(result => {
-      // userUid = result.user.uid;
-
-      // check if user exists in firebase
-      // if true, log in user
-      // if false, create user in firebase
-      // const reference = firebase.database().ref(`/${userUid}/${result.user.displayName}`);
-      // reference.push({
-      //   username: result.user.displayName
-      // });
       dispatch({
         type: 'LOG_IN',
         uid: result.user.uid,

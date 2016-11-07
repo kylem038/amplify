@@ -1,12 +1,10 @@
 import { combineReducers } from 'redux';
-import authReducer from './auth';
-import toggleCheckedReducer from './toggleChecked';
-import sendCheckedReducer from './sendChecked';
+import auth from './auth';
+import instruments from './instruments';
 
 const rootReducer = combineReducers({
-  authReducer,
-  toggleCheckedReducer,
-  sendCheckedReducer
+  auth,
+  instruments
 });
 
 export default rootReducer;

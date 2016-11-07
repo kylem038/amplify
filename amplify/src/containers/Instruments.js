@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Instruments from '../components/Instruments';
 
-import toggleChecked from '../actions/toggleChecked';
+import { toggleChecked } from '../actions/instruments';
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -12,7 +12,24 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const mapStateToProps = (state) => {
-  return state.toggleCheckedReducer;
+  console.log(state);
+  return state.instruments;
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Instruments);
+
+// const state = {
+//   instruments: [
+//     { name: 'Guitar', checkec: triue, hidden: false}
+//   ]
+// }
+
+
+// let checkedInstruments = [];
+// if (checked === true) {
+//   checkedInstruments.push(instrumentName)
+// }
+//
+// checkedInstruments = ['Gutair', 'Bass'];
+//
+// dispatch(saveInstrumentsToFirebase());

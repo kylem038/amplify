@@ -1,0 +1,8 @@
+instruments = [
+  { name: 'Guitar', checked: true, hidden: false },
+  { name: 'Vocals' },
+]
+
+allInstruments = [
+  {name: 'Guitar', checked: false, hidden: false}
+]
