@@ -21,11 +21,3 @@ export function addSingleSettingValue(settingName, settingValue) {
     settingName
   };
 }
-
-export function removeSingleSettingValue(settingName, settingValue) {
-  return {
-    type: 'REMOVE_SINGLE_SETTING',
-    settingValue,
-    settingName
-  };
-}
