@@ -34,3 +34,9 @@ export function saveSettings() {
     reference.set(userSettings);
   };
 }
+
+export function clearSettings() {
+  return {
+    type: 'CLEAR_SETTINGS'
+  };
+}
