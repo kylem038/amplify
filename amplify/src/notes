@@ -37,3 +37,12 @@ const Settings = () => {
 export default Settings;
 
 -------------
+
+<form className='setting-form'
+  <div className='FormBar'>
+    <span className='Name'>
+      <p>Guitar</p>
+    </span>
+    <ShowHideSpan />
+  </div>
+</form>

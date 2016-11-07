@@ -1,16 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router';
+import MultipleSelect from './MultipleSelect';
+import SingleSelect from './SingleSelect';
 
 const Settings = () => {
   return (
     <section className='Settings'>
       <h1>Settings</h1>
-      <p>Instrument(s) You Play</p>
-      <input type='text' placeholder='Instrument' className='SettingsInput' />
-      <p>Genres You Enjoy</p>
-      <input type='text' placeholder='Genre' className='SettingsInput' />
+      <MultipleSelect settingName="instruments" values={['Guitar', 'Bass', 'Vocals', 'Drums']}/>
+      <MultipleSelect settingName='genres' values={['Rock', 'Jazz', 'Indie', 'Hip-Hop']}/>
       <p>Skill Level</p>
-      <input type='text' placeholder='Skill' className='SettingsInput' />
+      <SingleSelect settingName='skillLevel' values={['Beginner', 'Experienced', 'Master']}/>
       <button className='SubmitSettings'>Submit</button>
       <button className='CancelSettings'>Cancel</button>
     </section>

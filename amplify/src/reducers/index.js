@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import auth from './auth';
-import instruments from './instruments';
+import settings from './settings';
 
 const rootReducer = combineReducers({
   auth,
-  instruments
+  settings
 });
 
 export default rootReducer;
