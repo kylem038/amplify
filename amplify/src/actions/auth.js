@@ -12,36 +12,6 @@ firebase.initializeApp(config);
 
 const provider = new firebase.auth.FacebookAuthProvider();
 
-// const saveInstrumentsToFirebase = (checkedInstruments) => {
-//   firebase.database().ref('instruments').set(checkedInstruments)
-//     .then(() => {
-//       dispatch({
-//         type: 'INSTRUMENTS_SAVED_TO_FIREBASE',
-//         checkedInstruments
-//       })
-//     })
-// }
-// {
-//   fbId: {
-//     firebaseID: {
-//       // data
-//     }
-//   }
-// }
-
-// const initialState = {
-//   auth: {
-//     username: '',
-//     uid: ''
-//   },
-//   userSettings: {
-//     uid: '',
-//     instruments: [],
-//     genres: [],
-//     skills: []
-//   }
-// }
-
 const startListeningToAuth = () => {
   return (dispatch, getState) => {
     firebase.auth().onAuthStateChanged(user => {

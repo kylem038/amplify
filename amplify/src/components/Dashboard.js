@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 
 class Dashboard extends Component {
-  constructor() {
-    super();
-    this.state = {
-    //  number of matches
-    // array of people objects matched
-    };
-  }
 
   render() {
     return (
