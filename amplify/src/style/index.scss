@@ -3,9 +3,6 @@
 @import '_dashboard';
 @import '_profile';
 @import '_settings';
-@import '_instruments';
-@import '_genres';
-@import '_skill';
 @import '_notfound';
 
 body {
@@ -34,6 +31,16 @@ a {
   text-decoration: none;
 }
 
+label {
+  width: 120px;
+  height: 22px;
+  padding-left: 15px;
+  padding-top: 5px;
+  background-color: #F35C08;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
 .SubmitSettings {
   background-color: #F35C08;
   border-radius: 27px;
@@ -43,7 +50,7 @@ a {
   width: 186px;
   font-size: 16px;
   font-weight: 100;
-  margin: 100px 0px 20px 10px;
+  margin: 50px 0px 20px 10px;
 }
 
 .CancelSettings {
@@ -55,7 +62,7 @@ a {
   width: 144px;
   font-size: 10px;
   font-weight: lighter;
-  margin-left: 30px;
+  margin: 0px 0px 30px 30px;
 }
 
 .ConnectButton {
