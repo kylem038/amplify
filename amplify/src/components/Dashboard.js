@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BandMateCard from './BandMateCard';
 
 class Dashboard extends Component {
 
@@ -13,23 +14,8 @@ class Dashboard extends Component {
           </span>
           <p className="BandmatesTotal">2</p>
         </div>
-        {/* references API call for # of matches */}
-        <ul className="Bandmate">
-          <li className='BandmateName'>Logan Bishop</li>
-          <li className='BandmateInstrument'>Guitar</li>
-          <span className='BandmateGenre'>
-          <li>Blues</li>
-          <li>Rock</li>
-          </span>
-        </ul>
-        <ul className="Bandmate">
-          <li className='BandmateName'>Austy Austin</li>
-          <li className='BandmateInstrument'>Bass</li>
-          <span className='BandmateGenre'>
-          <li>Blues</li>
-          <li>Rock</li>
-          </span>
-        </ul>
+        <BandMateCard username='Logan Bishop' instrument='Guitar' />
+        <BandMateCard username='Austy Austin' instrument='Bass' />
       </section>
     )
   }

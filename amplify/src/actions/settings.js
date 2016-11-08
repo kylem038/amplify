@@ -24,14 +24,31 @@ export function addSingleSettingValue(settingName, settingValue) {
   };
 }
 
+export function replaceAllSettings(userData) {
+  return {
+    type: 'REPLACE_ALL_SETTINGS',
+    userData
+  };
+}
+
 export function saveSettings() {
-  return (dispatch, getState) => {
+  return (getState) => {
     const userSettings = {
       username: getState().auth.username,
       settings: getState().settings
     };
     const reference = firebase.database().ref(`${firebase.auth().currentUser.uid}`);
     reference.set(userSettings);
+  };
+}
+
+export function retrieveSettings() {
+  return (dispatch) => {
+    const reference = firebase.database().ref(`${firebase.auth().currentUser.uid}`);
+    reference.once('value').then(function(snapshot) {
+    var userData = snapshot.val().settings;
+    dispatch(replaceAllSettings(userData));
+    });
   };
 }
 

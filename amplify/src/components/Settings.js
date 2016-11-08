@@ -7,6 +7,13 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/settings';
 
 export class Settings extends Component {
+
+  componentWillReceiveProps(nextProps) {
+    const { retrieveSettings } = this.props;
+    const { auth } = nextProps;
+    if ( auth.uid ) { retrieveSettings(); }
+  }
+
   render() {
     const { saveSettings, clearSettings } = this.props;
     return (

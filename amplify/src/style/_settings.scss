@@ -1,16 +1,29 @@
-.SettingsInput {
-  border-radius: 8px;
-  width: 200px;
-  height: 35px;
-  padding-left: 5px;
-}
-
 .Settings p {
   color: #F35C08;
   text-decoration: none;
+  margin: 20px;
+}
+
+.Settings h1 {
+  margin: 50px 25px 25px 25px;
 }
 
 section.Settings {
   display: flex;
   flex-direction: column;
+}
+
+section.MultipleSelect {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-weight: lighter;
+}
+
+section.SingleSelect {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
 }
