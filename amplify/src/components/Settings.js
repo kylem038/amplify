@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MultipleSelect from './MultipleSelect';
 import SingleSelect from './SingleSelect';
-const firebase = require('firebase');
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';

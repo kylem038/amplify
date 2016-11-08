@@ -15,7 +15,6 @@ const provider = new firebase.auth.FacebookAuthProvider();
 const startListeningToAuth = () => {
   return (dispatch, getState) => {
     firebase.auth().onAuthStateChanged(user => {
-      console.log('auth state changed');
       if (user) {
         dispatch({
           type: 'LOG_IN',
