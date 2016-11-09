@@ -11,6 +11,7 @@ h3 {
   color: #FFFFFF;
   border-radius: 25px;
   margin: 0px 0px 30px 0px;
+  word-break: break-word;
 }
 
 .PotentialBandHeader {
@@ -24,6 +25,7 @@ h3 {
 .BandmateName {
   font-weight: bold;
   font-style: normal;
+  word-break: break-word;
 }
 
 .Bandmate {
@@ -38,4 +40,5 @@ h3 {
   background-color: #FFFFFF;
   color: #F35C08;
   margin-bottom: 8px;
+  word-break: break-word;
 }
