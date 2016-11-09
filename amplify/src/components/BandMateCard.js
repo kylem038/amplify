@@ -1,14 +1,15 @@
 import React from 'react';
 
 const BandMateCard = (props) => {
-  const { username, instrument } = props;
+  const { username, settings: { instruments, genres } } = props;
   return(
     <section className="Bandmate">
       <p className='BandmateName'>{username}</p>
-      <p className='BandmateInstrument'>{instrument}</p>
+      <span className='BandmateInstrument'>
+        {instruments.map((instrument, i) => <p key={i} children={instrument} />)}
+      </span>
       <span className='BandmateGenre'>
-        <p>Blues</p>
-        <p>Rock</p>
+        {genres.map((genre, i) => <p key={i} children={genre} />)}
       </span>
     </section>
   )
