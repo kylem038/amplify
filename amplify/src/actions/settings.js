@@ -52,6 +52,13 @@ export function retrieveSettings() {
   };
 }
 
+export function stopReceivingSettings() {
+  return () => {
+    const reference = firebase.database().ref(`${firebase.auth().currentUser.uid}`);
+    reference.off();
+  };
+}
+
 export function clearSettings() {
   return {
     type: 'CLEAR_SETTINGS'

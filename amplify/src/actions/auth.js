@@ -1,4 +1,5 @@
 const firebase = require('firebase');
+import { retrieveSettings } from './settings';
 
 var config = {
     apiKey: "AIzaSyD-ccX7p5AidHl0RRto_paFBYI1XnQ36YU",
@@ -21,6 +22,7 @@ const startListeningToAuth = () => {
           uid: user.uid,
           username: user.displayName
         });
+        retrieveSettings()(dispatch);
       } else {
         if(getState().auth.status !== 'ANONYMOUS') {
           dispatch({
