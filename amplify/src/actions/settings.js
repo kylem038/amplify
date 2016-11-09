@@ -31,16 +31,7 @@ export function replaceAllSettings(userData) {
   };
 }
 
-export function saveSettings() {
-  return (getState) => {
-    const userSettings = {
-      username: getState().auth.username,
-      settings: getState().settings
-    };
-    const reference = firebase.database().ref(`${firebase.auth().currentUser.uid}`);
-    reference.set(userSettings);
-  };
-}
+
 
 export function retrieveSettings() {
   return (dispatch) => {
