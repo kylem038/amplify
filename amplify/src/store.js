@@ -5,11 +5,13 @@ const middleware = [ thunk ];
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, {
-  auth: {}, settings: {
+  auth: {},
+  settings: {
     instruments: [],
     genres: [],
     skillLevel: ''
-  }
+  },
+  dashboard: {}
 }, composeEnhancers(
   applyMiddleware(...middleware)
 ));
