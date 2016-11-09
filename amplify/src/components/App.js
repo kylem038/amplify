@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import SignIn from '../containers/SignIn';
 
-
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      currentLocation: {},
-    };
-  }
 
   getLocalCoordinates() {
     if (navigator.geolocation) {
@@ -26,7 +19,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // this.getLocalCoordinates();   --enable for prod
+    // this.getLocalCoordinates();   --enable in future iteration
   }
 
   render() {

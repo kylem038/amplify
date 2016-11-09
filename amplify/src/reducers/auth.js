@@ -2,7 +2,8 @@ const initialState = {
   auth: {
     status: 'ANONYMOUS',
     username: null,
-    uid: null
+    uid: null,
+    useremail: null,
   }
 };
 
@@ -12,19 +13,22 @@ const auth = ( state = initialState.auth, action ) => {
       return {
         status: 'AWAITING_AUTH_RESPONSE',
         username: 'guest',
-        uid: null
+        uid: null,
+        useremail: '',
       };
     case 'LOG_OUT':
       return {
         status: 'ANONYMOUS',
         username: 'guest',
-        uid: null
+        uid: null,
+        useremail: '',
       };
     case 'LOG_IN':
       return {
         status: 'SIGNED_IN',
         username: action.username,
-        uid: action.uid
+        uid: action.uid,
+        useremail: action.useremail,
       };
     default:
       return state;

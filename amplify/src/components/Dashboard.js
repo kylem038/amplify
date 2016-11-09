@@ -14,7 +14,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    const { dashboard } = this.props;
+    const { dashboard, showBandmateEmail } = this.props;
     const bandmates = _.map(dashboard, (val, key) => Object.assign({}, val,{id: key}));
     return (
       <section className='Dashboard'>
@@ -26,7 +26,7 @@ class Dashboard extends Component {
           </span>
           <p className="BandmatesTotal">{bandmates.length}</p>
         </div>
-        { bandmates.map((bandmate, i) => <BandMateCard key={i} {...bandmate} />) }
+        { bandmates.map((bandmate, i) => <BandMateCard key={i} onClick={(e) => showBandmateEmail()} {...bandmate} />) }
       </section>
     )
   }

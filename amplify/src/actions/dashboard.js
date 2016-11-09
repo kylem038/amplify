@@ -4,7 +4,13 @@ export function addBandmates(bandmateData) {
   return {
     type: 'ADD_BANDMATE',
     bandmateData
-};
+  };
+}
+
+export function showBandmateEmail() {
+  return {
+    type: 'SHOW_BANDMATE_EMAIL',
+  };
 }
 
 export function retrieveBandmates() {
