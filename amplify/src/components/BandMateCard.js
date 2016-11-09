@@ -9,7 +9,7 @@ const BandMateCard = (props) => {
         {instruments.map((instrument, i) => <p key={i} children={instrument} />)}
       </span>
       <span className='BandmateGenre'>
-        {genres.map((g, i) => <p key={i} children={g} />)}
+        {genres.map((genre, i) => <p key={i} children={genre} />)}
       </span>
     </section>
   )

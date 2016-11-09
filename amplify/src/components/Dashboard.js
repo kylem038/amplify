@@ -15,7 +15,7 @@ class Dashboard extends Component {
 
   render() {
     const { dashboard } = this.props;
-    const mates = _.map(dashboard, (val, key) => Object.assign({}, val,{id: key}));
+    const bandmates = _.map(dashboard, (val, key) => Object.assign({}, val,{id: key}));
     return (
       <section className='Dashboard'>
         <h1>JamFinder</h1>
@@ -24,9 +24,9 @@ class Dashboard extends Component {
             <h3>Potential</h3>
             <h3>BandMates</h3>
           </span>
-          <p className="BandmatesTotal">{mates.length}</p>
+          <p className="BandmatesTotal">{bandmates.length}</p>
         </div>
-        { mates.map((m, i) => <BandMateCard key={i} {...m} />) }
+        { bandmates.map((bandmate, i) => <BandMateCard key={i} {...bandmate} />) }
       </section>
     )
   }
