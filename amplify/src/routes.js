@@ -4,12 +4,22 @@ import Settings from './components/Settings';
 import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
 import NotFound from './components/NotFound';
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { connect } from 'react-redux';
+import { BrowserRouter, Match, Miss, Redirect } from 'react-router';
+
+const { auth } = this.props;
 
 const Routes = () => (
 <BrowserRouter>
   <div>
-    <Match exactly pattern='/' component={App} />
+    <Match pattern="/" exactly render={() => (
+      auth ? (
+        <Redirect to="/settings"/>
+      ) : (
+        <App />
+      )
+    )}/>
+    {/* <Match exactly pattern='/' component={App} /> */}
     <Match exactly pattern='/settings' component={Settings} />
     <Match exactly pattern='/dashboard' component={Dashboard} />
     <Match exactly pattern='/profile' component={Profile} />
@@ -18,4 +28,8 @@ const Routes = () => (
 </BrowserRouter>
 );
 
-export default Routes;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(Routes)
