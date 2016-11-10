@@ -50,7 +50,7 @@ label {
   width: 186px;
   font-size: 16px;
   font-weight: 100;
-  margin: 50px 0px 20px 10px;
+  margin: 50px 0px 20px 0px;
 }
 
 .CancelSettings {
@@ -62,7 +62,7 @@ label {
   width: 144px;
   font-size: 10px;
   font-weight: lighter;
-  margin: 0px 0px 30px 30px;
+  margin: 0px 0px 30px 20px;
 }
 
 .ConnectButton {
@@ -93,10 +93,26 @@ label {
   color: #FFFFFF;
 }
 
-.hidden {
-  display: none;
+@media (min-width: 400px) {
+  .App h1 {
+    font-size: 50px;
+    margin: 50px 25px 50px 10px;
+  }
 }
 
-.show {
-  display: block;
+@media (min-width: 650px) {
+  section.MultipleSelect {
+    display: flex;
+    flex-direction: row;
+  }
+  section.SingleSelect {
+    display: flex;
+    flex-direction: row;
+  }
+  section.Settings {
+    align-items: center;
+  }
+  button.CancelSettings {
+    margin-left: 5px;
+  }
 }
