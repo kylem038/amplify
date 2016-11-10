@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import BandMateCard from './BandMateCard';
 import _ from 'lodash';
+import { Link } from 'react-router';
+import SignOut from '../containers/SignOut';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -18,6 +20,7 @@ class Dashboard extends Component {
     const bandmates = _.map(dashboard, (val, key) => Object.assign({}, val,{id: key}));
     return (
       <section className='Dashboard'>
+        <Link to='/'><SignOut /></Link>
         <h1>JamFinder</h1>
         <div className='PotentialBandArea'>
           <span className='PotentialBandHeader'>
