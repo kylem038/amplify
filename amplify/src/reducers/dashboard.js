@@ -1,4 +1,6 @@
-const initialState = {};
+const initialState = {
+  showEmail: false,
+};
 
 const dashboard = ( state = initialState, action ) => {
   switch(action.type) {

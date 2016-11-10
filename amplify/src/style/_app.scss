@@ -1,5 +1,5 @@
 .App h1 {
-  font-size: 32px;
+  font-size: 42px;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -17,6 +17,9 @@ button.SignOut {
 }
 
 .FacebookLogin {
+  display: flex;
+  align-self: center;
+  margin-left: 9%;
   background: url('../../imgs/facebook.png') no-repeat;
   background-size: 100%;
   height: 40px;

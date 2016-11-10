@@ -4,7 +4,7 @@ export function addBandmates(bandmateData) {
   return {
     type: 'ADD_BANDMATE',
     bandmateData
-};
+  };
 }
 
 export function retrieveBandmates() {

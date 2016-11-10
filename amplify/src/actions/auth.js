@@ -20,7 +20,8 @@ const startListeningToAuth = () => {
         dispatch({
           type: 'LOG_IN',
           uid: user.uid,
-          username: user.displayName
+          username: user.displayName,
+          useremail: user.email,
         });
         retrieveSettings()(dispatch);
       } else {
@@ -45,7 +46,8 @@ const logIn = () => {
       dispatch({
         type: 'LOG_IN',
         uid: result.user.uid,
-        username: result.user.displayName
+        username: result.user.displayName,
+        email: result.user.email
       });
     })
       .catch(error => {

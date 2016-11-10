@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import SignIn from '../containers/SignIn';
-
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      currentLocation: {},
-    };
-  }
 
   getLocalCoordinates() {
     if (navigator.geolocation) {
@@ -26,10 +21,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // this.getLocalCoordinates();   --enable for prod
+    // this.getLocalCoordinates();   --enable in future iteration
   }
 
   render() {
+  const { auth } = this.props;
     return (
       <div className="App">
         <h1>JamFinder</h1>
@@ -39,4 +35,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(App)

@@ -19,19 +19,19 @@ export class MultipleSelect extends Component {
     return(
       <section className='MultipleSelect'>
         <p>{settingName}</p>
-        { values.map((valueName) => {
-          return (
-            <label key={valueName}>
-              <input
-                type="checkbox"
-                checked={settings[settingName].includes(valueName)}
-                value={valueName}
-                onChange={e => this.toggleSetting(e)}
-              /> {valueName}
-            </label>
-          )
-        })
-        }
+          { values.map((valueName) => {
+            return (
+              <label key={valueName}>
+                <input
+                  type="checkbox"
+                  checked={settings[settingName].includes(valueName)}
+                  value={valueName}
+                  onChange={e => this.toggleSetting(e)}
+                /> {valueName}
+              </label>
+            )
+          })
+          }
       </section>
     )
   }

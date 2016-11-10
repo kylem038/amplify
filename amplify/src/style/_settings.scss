@@ -21,6 +21,14 @@ section.MultipleSelect {
   font-weight: lighter;
 }
 
+section.selectOptions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-weight: lighter;
+}
+
 section.SingleSelect {
   display: flex;
   align-items: center;
