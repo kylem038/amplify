@@ -26,7 +26,9 @@ class Dashboard extends Component {
           </span>
           <p className="BandmatesTotal">{bandmates.length}</p>
         </div>
+        <span className='BandmateList'>
         { bandmates.map((bandmate, i) => <BandMateCard key={i} onClick={(e) => showBandmateEmail()} {...bandmate} />) }
+        </span>
       </section>
     )
   }

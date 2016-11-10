@@ -39,6 +39,7 @@ label {
   background-color: #F35C08;
   border: 1px solid black;
   border-radius: 25px;
+  margin-bottom: 5px;
 }
 
 .SubmitSettings {
@@ -98,6 +99,17 @@ label {
     font-size: 50px;
     margin: 50px 25px 50px 10px;
   }
+  div.PotentialBandArea {
+    margin-left: 110px;
+  }
+  .BandmateList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  a.Bandmate {
+    margin-left: 10px;
+  }
 }
 
 @media (min-width: 650px) {
@@ -115,4 +127,6 @@ label {
   button.CancelSettings {
     margin-left: 5px;
   }
+
+
 }
