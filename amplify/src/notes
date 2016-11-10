@@ -1,43 +1,3 @@
-instruments = [
-  { name: 'Guitar', checked: true, hidden: false },
-  { name: 'Vocals' },
-]
-
-allInstruments = [
-  {name: 'Guitar', checked: false, hidden: false}
-]
-
-//Old Settings
-
-import React from 'react';
-import { Link } from 'react-router';
-
-const Settings = () => {
-  return (
-    <section className='Settings'>
-      <h1>Settings</h1>
-      <Link to='/instruments'>
-      <p>Instrument(s) You Play</p>
-      <input type='text' placeholder='Instrument' className='SettingsInput' />
-      </Link>
-      <Link to='/genres'>
-      <p>Genres You Enjoy</p>
-      <input type='text' placeholder='Genre' className='SettingsInput' />
-      </Link>
-      <Link to='/skill'>
-      <p>Skill Level</p>
-      <input type='text' placeholder='Skill' className='SettingsInput' />
-      </Link>
-      <button className='SubmitSettings'><Link to='/dashboard' className='SubmitButtonLink'>Submit</Link></button>
-      <button className='CancelSettings'><Link to='/' className='CancelButtonLink'>Cancel</Link></button>
-    </section>
-  );
-}
-
-export default Settings;
-
--------------
-
 <form className='setting-form'
   <div className='FormBar'>
     <span className='Name'>
@@ -46,3 +6,24 @@ export default Settings;
     <ShowHideSpan />
   </div>
 </form>
+
+--------------
+
+getLocalCoordinates() {
+  if (navigator.geolocation) {
+    const geo_success = (position) => {
+      // return set state to hold current location data
+      console.log(position.coords.latitude, position.coords.longitude);
+    };
+
+    const geo_error = (error) => {
+      console.log(error);
+    };
+
+    navigator.geolocation.getCurrentPosition(geo_success, geo_error);
+  }
+}
+
+componentDidMount() {
+  // this.getLocalCoordinates();   --enable in future iteration
+}

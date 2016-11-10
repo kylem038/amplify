@@ -1,35 +1,34 @@
 import React, { Component } from 'react';
 import SignIn from '../containers/SignIn';
+import SignOut from '../containers/SignOut';
+import { connect } from 'react-redux';
 
 class App extends Component {
 
-  getLocalCoordinates() {
-    if (navigator.geolocation) {
-      const geo_success = (position) => {
-        // return set state to hold current location data
-        console.log(position.coords.latitude, position.coords.longitude);
-      };
-
-      const geo_error = (error) => {
-        console.log(error);
-      };
-
-      navigator.geolocation.getCurrentPosition(geo_success, geo_error);
-    }
-  }
-
-  componentDidMount() {
-    // this.getLocalCoordinates();   --enable in future iteration
-  }
 
   render() {
-    return (
-      <div className="App">
-        <h1>JamFinder</h1>
-        <SignIn />
-      </div>
-    );
+    const { auth } = this.props;
+
+    if ( auth.status === 'ANONYMOUS' ) {
+      return (
+        <div className="App">
+          <h1>JamFinder</h1>
+          <SignIn />
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <h1>JamFinder</h1>
+          <SignOut />
+        </div>
+      );
+    }
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(App)
