@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/settings';
 
+// import { MultipleSelect } from './MultipleSelect.js'
+
 export class MultipleSelect extends Component {
   toggleSetting(e) {
     const { addSettingValue, removeSettingValue, settingName } = this.props;
