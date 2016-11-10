@@ -7,9 +7,6 @@ const dashboard = ( state = initialState, action ) => {
     case 'ADD_BANDMATE':
       return action.bandmateData;
 
-    case 'SHOW_BANDMATE_EMAIL':
-      return { showEmail: true };
-
     default:
       return state;
   }

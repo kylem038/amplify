@@ -7,12 +7,6 @@ export function addBandmates(bandmateData) {
   };
 }
 
-export function showBandmateEmail() {
-  return {
-    type: 'SHOW_BANDMATE_EMAIL',
-  };
-}
-
 export function retrieveBandmates() {
   return (dispatch) => {
     const reference = firebase.database().ref();
