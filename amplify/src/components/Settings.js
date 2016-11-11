@@ -23,7 +23,7 @@ export class Settings extends Component {
   }
 
   render() {
-    const { clearSettings } = this.props;
+    const { clearSettings, settings } = this.props;
     return (
       <section className='Settings'>
         <Link to='/'><SignOut /></Link>
@@ -31,7 +31,13 @@ export class Settings extends Component {
         <MultipleSelect settingName="instruments" values={['Guitar', 'Bass', 'Vocals', 'Drums']}/>
         <MultipleSelect settingName='genres' values={['Rock', 'Jazz', 'Indie', 'Hip-Hop']}/>
         <SingleSelect settingName='skillLevel' values={['Beginner', 'Experienced', 'Master']}/>
-        <Link to='/dashboard'><button className='SubmitSettings' onClick={e => this.saveSettings()}>Submit</button></Link>
+        <Link to='/dashboard'>
+          <button
+          disabled={ settings.instruments.length === 0 || settings.genres.length === 0 }
+          className='SubmitSettings'
+          onClick={e => this.saveSettings()}>Submit
+          </button>
+        </Link>
         <button className='CancelSettings' onClick={e => clearSettings()}>Clear Settings</button>
       </section>
     );
