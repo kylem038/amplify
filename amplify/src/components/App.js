@@ -36,8 +36,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(App)
-
-{/* <div className="App">
-  <h1>JamFinder</h1>
-  <SignOut />
-</div> */}
