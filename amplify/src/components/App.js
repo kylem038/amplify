@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import SignIn from '../containers/SignIn';
-import SignOut from '../containers/SignOut';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 
 class App extends Component {
-
 
   shouldComponentUpdate(nextProps) {
     return nextProps.auth.uid !== this.props.auth.uid;
@@ -28,8 +26,6 @@ class App extends Component {
     }
   }
 }
-
-
 
 const mapStateToProps = (state) => {
   return state;

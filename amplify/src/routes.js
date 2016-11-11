@@ -5,20 +5,11 @@ import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
 import NotFound from './components/NotFound';
 import { connect } from 'react-redux';
-import { BrowserRouter, Match, Miss, Redirect } from 'react-router';
-
-// const { auth } = this.props;
+import { BrowserRouter, Match, Miss } from 'react-router';
 
 const Routes = () => (
 <BrowserRouter>
   <div>
-    {/* <Match pattern="/" exactly render={() => (
-      auth ? (
-        <Redirect to="/settings"/>
-      ) : (
-        <App />
-      )
-    )}/> */}
     <Match exactly pattern='/' component={App} />
     <Match exactly pattern='/settings' component={Settings} />
     <Match exactly pattern='/dashboard' component={Dashboard} />

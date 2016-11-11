@@ -54,6 +54,10 @@ label {
   margin: 50px 0px 20px 0px;
 }
 
+.SubmitSettings:disabled {
+  background-color: #780800;
+}
+
 .CancelSettings {
   background-color: #780800;
   border-radius: 27px;
