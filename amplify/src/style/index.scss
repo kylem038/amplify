@@ -99,14 +99,22 @@ label {
     font-size: 50px;
     margin: 50px 25px 50px 10px;
   }
-  div.PotentialBandArea {
-    margin-left: 110px;
+  // div.PotentialBandArea {
+  //   margin-left: 110px;
+  // }
+  section.Dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
   .BandmateList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
+
   a.Bandmate {
     margin-left: 10px;
   }
